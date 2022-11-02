@@ -5,9 +5,9 @@ using namespace std;
 
 
 int main() {
-    int n, sd; /
+    int n, sd; /* sd is an integer socket descriptor */
     struct sockaddr_in server;
-    char buf[512];
+    char buf[512]; /* contains the memory address to store the data */
 
     server.sin_family = AF_INET;
     server.sin_addr.s_addr = htonl(INADDR_ANY);
