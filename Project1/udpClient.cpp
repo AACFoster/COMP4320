@@ -10,13 +10,15 @@
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostrem>
+#include <fstream>
 
 using namespace std;
 
 void datagramProcessing(FILE *fp, int sockfd, const SA *pservaddr, socklen_t servlen) {
     int n;
     char sendline[MAXLINE], recvline[MAXLINE + 1];
-    socklen_t len;
+    socklen_t len; /* buffer size */
     struct sockaddr *preply_addr;
 
     preply_addr = Malloc(servlen);
